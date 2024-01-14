@@ -1,0 +1,20 @@
+{% extends "padre.html" %}
+
+{% block titulo %} Bienvenido a mi pagina {% endblock %}
+
+{% block descripcion %} 
+
+<form action="/resultadoNombre/" method="GET">
+    Ingresa el Nombre de la Persona: <input type="text" name="nombres">
+    <input type="submit" value="Buscar">
+</form>
+
+   
+{% for nombre in nombre %}
+                
+<p>Apellido: {{nombre.apellido}} ---- DNI: {{nombre.dni}}</p>
+
+{% endfor %}
+
+
+{% endblock %}
